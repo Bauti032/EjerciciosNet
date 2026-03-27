@@ -15,6 +15,8 @@ public class Gestion_Banco
         {
             cuenta.Saldo = cuenta.Saldo - cant;
             Console.WriteLine("Saldo restado correctamente: " + cant);
+            string cantidad_saldo = cuenta.Saldo.ToString();
+            Console.WriteLine($"El saldo actual es de ${cantidad_saldo}");
         } else
         {
             Console.WriteLine("Saldo insuficiente o Igual a 0.");

@@ -1,5 +1,5 @@
-﻿namespace EjerciciosNet;
-
+﻿
+namespace EjerciciosNet.Ejercicio01_Pedidos;
 public class GestionPedido
 {
     public static void AgregarProducto(Pedido pedido, Producto producto)

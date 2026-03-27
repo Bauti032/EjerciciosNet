@@ -12,3 +12,4 @@ C:\Users\Bautista\Desktop\EjerciciosNet\EjerciciosNet\obj\Debug\net10.0\refint\E
 C:\Users\Bautista\Desktop\EjerciciosNet\EjerciciosNet\obj\Debug\net10.0\EjerciciosNet.pdb
 C:\Users\Bautista\Desktop\EjerciciosNet\EjerciciosNet\obj\Debug\net10.0\EjerciciosNet.genruntimeconfig.cache
 C:\Users\Bautista\Desktop\EjerciciosNet\EjerciciosNet\obj\Debug\net10.0\ref\EjerciciosNet.dll
+C:\Users\Bautista\Desktop\EjerciciosNet\EjerciciosNet\obj\Debug\net10.0\EjerciciosNet.sourcelink.json
