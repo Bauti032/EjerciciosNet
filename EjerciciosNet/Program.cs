@@ -1,14 +1,16 @@
 ﻿using System;
 using EjerciciosNet;
-using EjerciciosNet.Ejercicio01_Pedidos;
-using EjerciciosNet.Ejercicio02_AdminCurso;
-using EjerciciosNet.Ejercicio03_CuentaBancaria;
-using EjerciciosNet.Ejercicio04_ReservaHotel;
-
+// using EjerciciosNet.Ejercicio01_Pedidos;
+// using EjerciciosNet.Ejercicio02_AdminCurso;
+// using EjerciciosNet.Ejercicio03_CuentaBancaria;
+// using EjerciciosNet.Ejercicio04_ReservaHotel;
+using EjerciciosNet.Ejercicio05_GestionInv;
+using ProdInv = EjerciciosNet.Ejercicio05_GestionInv.Producto;
 // Ejercicio01_Pedidos();
 // Ejercicio02_AdminCurso();
 // Ejercicio03_CuentaBancaria();
-Ejercicio04_ReservaHotel();
+// Ejercicio04_ReservaHotel();
+Ejercicio05_GestionInv();
 // static void Ejercicio01_Pedidos() 
 //     {    
 //         Pedido pedido = new Pedido();
@@ -202,7 +204,7 @@ Ejercicio04_ReservaHotel();
 //     }
 // }
 
-static void Ejercicio04_ReservaHotel()
+// static void Ejercicio04_ReservaHotel()
 {
     Console.WriteLine("Ingrese el nombre del huesped: ");
     string nuevo_huesped = Console.ReadLine();
@@ -257,4 +259,68 @@ static void Ejercicio04_ReservaHotel()
 
             }
         }
+}
+
+
+
+static void Ejercicio05_GestionInv()
+{
+    string menu = "a";
+
+    while (menu != null)
+    {
+        Console.WriteLine("Bienvenido al Sistema de gestión.");
+        Console.WriteLine("Operaciones a realizar ");
+        Console.WriteLine("1. Ingresar Proovedor ");
+        Console.WriteLine("2. Ingresar Productos ");
+        Console.WriteLine("3. Agregar Stock de productos ");
+        Console.WriteLine("4. Retirar Stock de producto");
+        Console.WriteLine("5. Consultar Stock de producto");
+        Console.WriteLine("6. Salir del sistema");
+
+        int op;
+        Console.WriteLine("Ingrese la Opción: ");
+        op = Convert.ToInt32(Console.ReadLine());
+
+
+        Gestion_Inventario gestinv = new Gestion_Inventario();
+
+        switch (op)
+        {
+            case 1:
+                Console.WriteLine("Ingrese nombre del proovedor: ");
+                string nombre_prov = Console.ReadLine();
+
+                Console.WriteLine("Ingrese el cuit del proovedor: ");
+                string cuit_proov = Console.ReadLine();
+
+                Proovedor proovedor = new Proovedor(nombre_prov, cuit_proov);
+                gestinv.AgregarProovedor(proovedor);
+                break;
+
+            case 2:
+                Console.WriteLine("Ingrese nombre del producto: ");
+                string nombre_prod = Console.ReadLine();
+
+                Console.WriteLine("Ingrese el stock del producto: ");
+                int stock = Convert.ToInt32(Console.ReadLine());
+
+                ProdInv prod = new ProdInv(nombre_prod, stock);
+                gestinv.AgregarProducto(prod);
+                break;
+
+            case 3:
+                Console.WriteLine("Ingrese la cantidad del producto a ingresar: ");
+                int cant = Convert.ToInt32(Console.ReadLine());
+                gestinv.AgregarStock(prod, cant);
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+
+        }
+    }
 }
